@@ -1,0 +1,7698 @@
+---
+vendor: RealThread
+dvendor: STMicroelectronics
+name: RealThread_STM32F1
+version: 1.0.0
+type: Chip_Support_Package
+family_name: STM32
+series:
+  description: |-
+    STMicroelectronics' STM32F1 series of mainstream MCUs covers the needs of a large variety of applications in the industrial, medical and consumer markets. High performance with first-class peripherals and low-power, low-voltage operation is paired with a high level of integration at accessible prices with a simple architecture and easy-to-use tools.
+    Typical applications include motor drives and application control, medical and handheld equipment, industrial applications, PLCs, inverters, printers, and scanners, alarm systems, video intercom, HVAC and home audio equipment.
+
+      - LCD parallel interface, 8080/6800 modes
+      - 5 V-tolerant I/Os
+      - Timer with quadrature (incremental) encoder input
+      - 96-bit unique ID
+  cpu_info:
+    core: Cortex-M3
+  peripheral: {}
+  sub_series:
+  - sub_series_name: STM32F100
+    marco: []
+    source_files: []
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F100C4
+      marco:
+      - STM32F100xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xb.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '10'
+        IOs: '37'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100C4\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00004000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100C6
+      marco:
+      - STM32F100xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xb.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '10'
+        IOs: '37'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100C6\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00008000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100C8
+      marco:
+      - STM32F100xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xb.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '7'
+        ADC: '10'
+        IOs: '37'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100C8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100CB
+      marco:
+      - STM32F100xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xb.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '7'
+        ADC: '10'
+        IOs: '37'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100CB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100R4
+      marco:
+      - STM32F100xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xb.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '51'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '64'
+        BGA: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100R4\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00004000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100R6
+      marco:
+      - STM32F100xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xb.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '51'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '64'
+        BGA: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100R6\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00008000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100R8
+      marco:
+      - STM32F100xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xb.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '7'
+        ADC: '16'
+        IOs: '51'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '64'
+        BGA: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100R8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100RB
+      marco:
+      - STM32F100xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xb.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '7'
+        ADC: '16'
+        IOs: '51'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '64'
+        BGA: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100RB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100RC
+      marco:
+      - STM32F100xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xe.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '11'
+        ADC: '16'
+        IOs: '51'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100RC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00006000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100RD
+      marco:
+      - STM32F100xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xe.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '11'
+        ADC: '16'
+        IOs: '51'
+        SPI: '3'
+        I2C: '2'
+        USART: '5'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100RD\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00060000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00008000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100RE
+      marco:
+      - STM32F100xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xe.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '11'
+        ADC: '16'
+        IOs: '51'
+        SPI: '3'
+        I2C: '2'
+        USART: '5'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100RE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00080000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00008000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100V8
+      marco:
+      - STM32F100xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xb.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '7'
+        ADC: '16'
+        IOs: '80'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100V8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100VB
+      marco:
+      - STM32F100xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xb.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '7'
+        ADC: '16'
+        IOs: '80'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100VB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100VC
+      marco:
+      - STM32F100xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xe.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '11'
+        ADC: '16'
+        IOs: '80'
+        SPI: '3'
+        I2C: '2'
+        USART: '5'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100VC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00006000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100VD
+      marco:
+      - STM32F100xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xe.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '11'
+        ADC: '16'
+        IOs: '80'
+        SPI: '3'
+        I2C: '2'
+        USART: '5'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100VD\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00060000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00008000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100VE
+      marco:
+      - STM32F100xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xe.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '11'
+        ADC: '16'
+        IOs: '80'
+        SPI: '3'
+        I2C: '2'
+        USART: '5'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100VE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00080000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00008000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100ZC
+      marco:
+      - STM32F100xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xe.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '11'
+        ADC: '16'
+        IOs: '112'
+        SPI: '3'
+        I2C: '2'
+        USART: '5'
+        QFP: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100ZC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00006000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100ZD
+      marco:
+      - STM32F100xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xe.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '11'
+        ADC: '16'
+        IOs: '112'
+        SPI: '3'
+        I2C: '2'
+        USART: '5'
+        QFP: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100ZD\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00060000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00008000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F100ZE
+      marco:
+      - STM32F100xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f100xe.h
+      docs:
+      - documents/CD00246267.pdf
+      peripheral:
+        Timer: '11'
+        ADC: '16'
+        IOs: '112'
+        SPI: '3'
+        I2C: '2'
+        USART: '5'
+        QFP: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F100ZE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00080000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00008000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F100xx.svd
+    cpu_info:
+      max_clock: '24000000'
+    docs:
+    - documents/CD00246267.pdf
+    peripheral:
+      WDT: '2'
+      RTC: '32768'
+      VCC: '2.00'
+      Temp: "-40"
+      DAC: '2'
+  - sub_series_name: STM32F101
+    marco: []
+    source_files: []
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F101C4
+      marco:
+      - STM32F101x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '2'
+        ADC: '10'
+        IOs: '36'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101C4\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00004000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101C6
+      marco:
+      - STM32F101x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '2'
+        ADC: '10'
+        IOs: '36'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101C6\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00008000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101C8
+      marco:
+      - STM32F101xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '10'
+        IOs: '36'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101C8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101CB
+      marco:
+      - STM32F101xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '10'
+        IOs: '36'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101CB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00004000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101R4
+      marco:
+      - STM32F101x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '2'
+        ADC: '16'
+        IOs: '51'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101R4\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00004000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101R6
+      marco:
+      - STM32F101x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '2'
+        ADC: '16'
+        IOs: '51'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101R6\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00008000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101R8
+      marco:
+      - STM32F101xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '16'
+        IOs: '51'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101R8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101RB
+      marco:
+      - STM32F101xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '16'
+        IOs: '51'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101RB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00004000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101RC
+      marco:
+      - STM32F101xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '51'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101RC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00008000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101RD
+      marco:
+      - STM32F101xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '51'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101RD\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00060000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x0000C000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101RE
+      marco:
+      - STM32F101xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '51'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101RE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00080000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x0000C000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101RF
+      marco:
+      - STM32F101xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '12'
+        ADC: '16'
+        IOs: '51'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101RF\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x000C0000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00014000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101RG
+      marco:
+      - STM32F101xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '12'
+        ADC: '16'
+        IOs: '51'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101RG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00100000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00014000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101T4
+      marco:
+      - STM32F101x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '2'
+        ADC: '10'
+        IOs: '26'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '36'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101T4\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00004000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101T6
+      marco:
+      - STM32F101x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '2'
+        ADC: '10'
+        IOs: '26'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '36'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101T6\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00008000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101T8
+      marco:
+      - STM32F101xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '10'
+        IOs: '26'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '36'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101T8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101TB
+      marco:
+      - STM32F101xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '10'
+        IOs: '26'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '36'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101TB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00004000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101V8
+      marco:
+      - STM32F101xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '16'
+        IOs: '80'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101V8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101VB
+      marco:
+      - STM32F101xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '16'
+        IOs: '80'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101VB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00004000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101VC
+      marco:
+      - STM32F101xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '80'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101VC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00008000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101VD
+      marco:
+      - STM32F101xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '80'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101VD\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00060000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x0000C000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101VE
+      marco:
+      - STM32F101xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '80'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101VE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00080000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x0000C000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101VF
+      marco:
+      - STM32F101xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '12'
+        ADC: '16'
+        IOs: '80'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101VF\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x000C0000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00014000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101VG
+      marco:
+      - STM32F101xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '12'
+        ADC: '16'
+        IOs: '80'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101VG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00100000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00014000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101ZC
+      marco:
+      - STM32F101xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '112'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101ZC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00008000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101ZD
+      marco:
+      - STM32F101xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '112'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101ZD\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00060000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x0000C000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101ZE
+      marco:
+      - STM32F101xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '6'
+        ADC: '16'
+        IOs: '112'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101ZE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00080000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x0000C000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101ZF
+      marco:
+      - STM32F101xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '12'
+        ADC: '16'
+        IOs: '112'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101ZF\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x000C0000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00014000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F101ZG
+      marco:
+      - STM32F101xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f101xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '12'
+        ADC: '16'
+        IOs: '112'
+        DAC: '2'
+        SPI: '3'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        QFP: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F101ZG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f101xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00100000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00014000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F101xx.svd
+    cpu_info:
+      max_clock: '36000000'
+    docs:
+    - documents/CD00171190.pdf
+    peripheral:
+      WDT: '2'
+      RTC: '32768'
+      VCC: '2.00'
+      Temp: "-40"
+  - sub_series_name: STM32F102
+    marco: []
+    source_files: []
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F102C4
+      marco:
+      - STM32F102x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f102x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '2'
+        ADC: '10'
+        IOs: '36'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F102C4\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f102x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00004000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F102C6
+      marco:
+      - STM32F102x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f102x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '2'
+        ADC: '10'
+        IOs: '36'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F102C6\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f102x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00008000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F102C8
+      marco:
+      - STM32F102xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f102xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '10'
+        IOs: '36'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F102C8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f102xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F102CB
+      marco:
+      - STM32F102xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f102xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '10'
+        IOs: '36'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F102CB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f102xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00004000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F102R4
+      marco:
+      - STM32F102x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f102x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '2'
+        ADC: '16'
+        IOs: '51'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F102R4\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f102x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00004000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F102R6
+      marco:
+      - STM32F102x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f102x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '2'
+        ADC: '16'
+        IOs: '51'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F102R6\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f102x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00008000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F102R8
+      marco:
+      - STM32F102xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f102xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '16'
+        IOs: '51'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F102R8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f102xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F102RB
+      marco:
+      - STM32F102xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f102xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '16'
+        IOs: '51'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F102RB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f102xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00004000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F102xx.svd
+    cpu_info:
+      max_clock: '48000000'
+    docs:
+    - documents/CD00171190.pdf
+    peripheral:
+      WDT: '2'
+      RTC: '32768'
+      VCC: '2.00'
+      Temp: "-40"
+      USBD: '1'
+  - sub_series_name: STM32F103
+    marco: []
+    source_files: []
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F103C4
+      marco:
+      - STM32F103x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '10'
+        IOs: '36'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103C4\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00004000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103C6
+      marco:
+      - STM32F103x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '10'
+        IOs: '36'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103C6\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00008000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103C8
+      marco:
+      - STM32F103xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '4'
+        ADC: '10'
+        IOs: '36'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103C8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00005000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103CB
+      marco:
+      - STM32F103xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '4'
+        ADC: '10'
+        IOs: '36'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '48'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103CB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00005000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103R4
+      marco:
+      - STM32F103x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '16'
+        IOs: '51'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '64'
+        BGA: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103R4\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00004000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103R6
+      marco:
+      - STM32F103x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '16'
+        IOs: '51'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '64'
+        BGA: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103R6\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00008000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103R8
+      marco:
+      - STM32F103xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '4'
+        ADC: '16'
+        IOs: '51'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '64'
+        BGA: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103R8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00005000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103RB
+      marco:
+      - STM32F103xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '4'
+        ADC: '16'
+        IOs: '51'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '64'
+        BGA: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103RB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00005000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103RC
+      marco:
+      - STM32F103xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '8'
+        ADC: '16'
+        IOs: '51'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '64'
+        CSP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103RC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x0000C000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103RD
+      marco:
+      - STM32F103xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '8'
+        ADC: '16'
+        IOs: '51'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '64'
+        CSP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103RD\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00060000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103RE
+      marco:
+      - STM32F103xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '8'
+        ADC: '16'
+        IOs: '51'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '64'
+        CSP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103RE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00080000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103RF
+      marco:
+      - STM32F103xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '12'
+        ADC: '16'
+        IOs: '51'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103RF\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x000C0000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00018000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103RG
+      marco:
+      - STM32F103xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '12'
+        ADC: '16'
+        IOs: '51'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103RG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00100000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00018000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103T4
+      marco:
+      - STM32F103x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '10'
+        IOs: '26'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '36'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103T4\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00004000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00001800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103T6
+      marco:
+      - STM32F103x6
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103x6.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '3'
+        ADC: '10'
+        IOs: '26'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '36'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103T6\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103x6.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00008000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00002800'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103T8
+      marco:
+      - STM32F103xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '4'
+        ADC: '10'
+        IOs: '26'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '36'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103T8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00005000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103TB
+      marco:
+      - STM32F103xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '4'
+        ADC: '10'
+        IOs: '26'
+        SPI: '1'
+        I2C: '1'
+        USART: '2'
+        QFP: '36'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103TB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00005000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103V8
+      marco:
+      - STM32F103xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '4'
+        ADC: '16'
+        IOs: '80'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '100'
+        BGA: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103V8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00005000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103VB
+      marco:
+      - STM32F103xB
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xb.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '4'
+        ADC: '16'
+        IOs: '80'
+        SPI: '2'
+        I2C: '2'
+        USART: '3'
+        QFP: '100'
+        BGA: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103VB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xb.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00005000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103VC
+      marco:
+      - STM32F103xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '8'
+        ADC: '16'
+        IOs: '80'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '100'
+        BGA: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103VC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x0000C000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103VD
+      marco:
+      - STM32F103xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '8'
+        ADC: '16'
+        IOs: '80'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '100'
+        BGA: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103VD\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00060000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103VE
+      marco:
+      - STM32F103xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '8'
+        ADC: '16'
+        IOs: '80'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '100'
+        BGA: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103VE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00080000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103VF
+      marco:
+      - STM32F103xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '14'
+        ADC: '16'
+        IOs: '80'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103VF\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x000C0000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00018000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103VG
+      marco:
+      - STM32F103xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '14'
+        ADC: '16'
+        IOs: '80'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103VG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00100000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00018000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103ZC
+      marco:
+      - STM32F103xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '8'
+        ADC: '21'
+        IOs: '112'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '144'
+        BGA: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103ZC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x0000C000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103ZD
+      marco:
+      - STM32F103xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '8'
+        ADC: '21'
+        IOs: '112'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '144'
+        BGA: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103ZD\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00060000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103ZE
+      marco:
+      - STM32F103xE
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xe.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '8'
+        ADC: '21'
+        IOs: '112'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '144'
+        BGA: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103ZE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xe.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00080000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103ZF
+      marco:
+      - STM32F103xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '14'
+        ADC: '21'
+        IOs: '112'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '144'
+        BGA: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103ZF\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x000C0000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00018000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F103ZG
+      marco:
+      - STM32F103xG
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f103xg.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        Timer: '14'
+        ADC: '21'
+        IOs: '112'
+        DAC: '2'
+        SPI: '3'
+        I2S: '2'
+        I2C: '2'
+        USART: '3'
+        UART: '2'
+        SDIO: '1'
+        QFP: '144'
+        BGA: '144'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F103ZG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xg.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00100000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00018000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F103xx.svd
+    cpu_info:
+      max_clock: '72000000'
+    docs:
+    - documents/CD00171190.pdf
+    peripheral:
+      WDT: '2'
+      RTC: '32768'
+      VCC: '2.00'
+      Temp: "-40"
+      USBD: '1'
+      CAN: '1'
+  - sub_series_name: STM32F105
+    marco: []
+    source_files: []
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F105R8
+      marco:
+      - STM32F105xC
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f105xc.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        IOs: '51'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F105R8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f105xc.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F105RB
+      marco:
+      - STM32F105xC
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f105xc.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        IOs: '51'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F105RB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f105xc.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F105RC
+      marco:
+      - STM32F105xC
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f105xc.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        IOs: '51'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F105RC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f105xc.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F105V8
+      marco:
+      - STM32F105xC
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f105xc.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        IOs: '80'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F105V8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f105xc.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00010000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F105VB
+      marco:
+      - STM32F105xC
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f105xc.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        IOs: '80'
+        QFP: '100'
+        BGA: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F105VB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f105xc.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F105VC
+      marco:
+      - STM32F105xC
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f105xc.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        IOs: '80'
+        QFP: '100'
+        BGA: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F105VC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f105xc.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F105xx.svd
+    cpu_info:
+      max_clock: '72000000'
+    docs:
+    - documents/CD00171190.pdf
+    peripheral:
+      WDT: '2'
+      RTC: '32768'
+      VCC: '2.00'
+      Temp: "-40"
+      Timer: '7'
+      ADC: '16'
+      DAC: '2'
+      SPI: '3'
+      I2S: '2'
+      I2C: '2'
+      USART: '3'
+      UART: '2'
+      CAN: '2'
+      USBOTG: '1'
+  - sub_series_name: STM32F107
+    marco: []
+    source_files: []
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F107RB
+      marco:
+      - STM32F107xC
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f107xc.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        IOs: '51'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F107RB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f107xc.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F107RC
+      marco:
+      - STM32F107xC
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f107xc.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        IOs: '51'
+        QFP: '64'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F107RC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f107xc.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F107VB
+      marco:
+      - STM32F107xC
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f107xc.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        IOs: '80'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F107VB\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f107xc.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00020000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F107VC
+      marco:
+      - STM32F107xC
+      source_files:
+      - src/Drivers/CMSIS/Device\ST\STM32F1xx\Include\stm32f107xc.h
+      docs:
+      - documents/CD00171190.pdf
+      peripheral:
+        IOs: '80'
+        QFP: '100'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F107VC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f107xc.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IROM1:
+            addr: '0x08000000'
+            size: '0x00040000'
+          IRAM1:
+            addr: '0x20000000'
+            size: '0x00010000'
+        default_rom: IROM1
+        start_up: IROM1
+        default_ram: IRAM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F107xx.svd
+    cpu_info:
+      max_clock: '72000000'
+    docs:
+    - documents/CD00171190.pdf
+    peripheral:
+      WDT: '2'
+      RTC: '32768'
+      VCC: '2.00'
+      Temp: "-40"
+      Timer: '7'
+      ADC: '16'
+      DAC: '2'
+      SPI: '3'
+      I2S: '2'
+      I2C: '2'
+      USART: '3'
+      UART: '2'
+      CAN: '2'
+      USBOTG: '1'
+      ETH: '1'
+  series_name: RealThread_STM32F1xx
+  docs:
+  - documents/dui0552a_cortex_m3_dgug.pdf
+  source_files:
+  - src/Drivers/STM32F1xx_HAL_Driver
+  - src/Drivers/CMSIS/Include
+  - src/Drivers/CMSIS/RTOS
+  - src/Drivers/CMSIS/Device/ST/STM32F1xx/Include
+  - src/Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
+  compiler:
+    gcc:
+      entry_point: ''
+      link_script: ''
+      marco: []
+      files:
+      - src/Drivers/CMSIS/Lib/GCC
+    armcc:
+      entry_point: none
+      link_script: none
+      marco:
+      - none
+      files:
+      - none
+    iarcc:
+      entry_point: none
+      link_script: none
+      marco:
+      - none
+      files:
+      - none
+  debug:
+    jlink:
+      files: []
+    stlink:
+      files: []
+  project_type:
+    bare_metal:
+      function_map:
+        clk_init: none
+        uart_init: none
+        putc: none
+        sysTick: none
+      marco:
+      - SOC_FAMILY_STM32
+      - SOC_SERIES_STM32F1
+      - USE_HAL_DRIVER
+      source_files:
+      - src/baremetal-port
+    rtt_nano:
+      function_map:
+        clk_init: none
+        uart_init: none
+        putc: none
+        getc: none
+        sysTick: none
+        heap_init: none
+      marco:
+      - SOC_FAMILY_STM32
+      - SOC_SERIES_STM32F1
+      - USE_HAL_DRIVER
+      source_files:
+      - src/nano-port
+    rtt:
+      function_map:
+        rt_hw_board_init;: none
+        rt_hw_serial_register: none
+        rt_hw_pin_register: none
+        heap_init: none
+      marco:
+      - SOC_FAMILY_STM32
+      - SOC_SERIES_STM32F1
+      - USE_HAL_DRIVER
+      source_files:
+      - src/rtt-port
+  marco: []
+  ui:
+    uart:
+      default_value: UART2
+      prompt_message_en: select one uart as console output interface
+      prompt_message_zh: 选择一个串口作为控制台信息输出接口
+    tx_pin:
+      default_value: PA2
+      prompt_message_en: 'set the tx pin name of the console device interface, the
+        value should be with a format"P+[port name][pin number]",eg. PA2,PB6 '
+      prompt_message_zh: 设置控制台设备的数据发送引脚的名称, 名称应该具有以下格式“P+[端口名称][端口编号]”, 比如：PA2, PB6
+    rx_pin:
+      default_value: PA3
+      prompt_message_en: 'set the rx pin name of the console device interface, the
+        value should be with a format"P+[port name][pin number]", eg. PA3, PB7 '
+      prompt_message_zh: 设置控制台设备的数据发送引脚的名称，名称应该具有以下格式“P+[端口名称][端口编号]”, 比如：PA2, PB6
+version_number: '1'
+manufacture: ST
