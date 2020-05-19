@@ -17,7 +17,7 @@
 #define DBG_LVL DBG_INFO
 #include <rtdbg.h>
 
-void system_clock_config(int target_freq_mhz)
+void system_clock_config(int target_freq_Mhz)
 {
     RCC_OscInitTypeDef RCC_OscInitStruct = {0};
     RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
@@ -29,7 +29,21 @@ void system_clock_config(int target_freq_mhz)
     RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
     RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
     RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI_DIV2;
+#if defined(STM32F100xB) || defined(STM32F100xE)
+    RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
+#endif
+#if defined(STM32F101x6) || defined(STM32F101xB) || defined(STM32F101xE) || defined(STM32F101xG)
+    RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+#endif
+#if defined(STM32F102x6) || defined(STM32F102xB)
+    RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL12;
+#endif
+#if defined(STM32F103x6) || defined(STM32F103xB) || defined(STM32F103xE) || defined(STM32F103xG)
     RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL16;
+#endif
+#if defined(STM32F105xC) || defined(STM32F107xC)
+    RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+#endif
     if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
     {
       Error_Handler();
@@ -43,7 +57,21 @@ void system_clock_config(int target_freq_mhz)
     RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
     RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
+#if defined(STM32F100xB) || defined(STM32F100xE)
+    if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+#endif
+#if defined(STM32F101x6) || defined(STM32F101xB) || defined(STM32F101xE) || defined(STM32F101xG)
+    if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+#endif
+#if defined(STM32F102x6) || defined(STM32F102xB)
+    if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+#endif
+#if defined(STM32F103x6) || defined(STM32F103xB) || defined(STM32F103xE) || defined(STM32F103xG)
     if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+#endif
+#if defined(STM32F105xC) || defined(STM32F107xC)
+        if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+#endif
     {
       Error_Handler();
     }

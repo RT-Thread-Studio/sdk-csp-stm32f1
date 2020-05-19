@@ -351,12 +351,20 @@ static rt_err_t stm32_gpio_configure(struct stm32_uart_config *config)
            case 2:
                __HAL_AFIO_REMAP_USART2_ENABLE();
                break;
-           case 3:
-               if (uart_remaps[tx_index].normal_uart < 0)
-                   __HAL_AFIO_REMAP_USART3_ENABLE();
-               else
-                   __HAL_AFIO_REMAP_USART3_PARTIAL();
-               break;
+            case 3:
+                if (uart_remaps[tx_index].normal_uart < 0)
+                {
+#ifdef AFIO_MAPR_USART3_REMAP_FULLREMAP
+                    __HAL_AFIO_REMAP_USART3_ENABLE();
+#endif
+                }
+                else
+                {
+#ifdef AFIO_MAPR_USART3_REMAP_PARTIALREMAP
+                    __HAL_AFIO_REMAP_USART3_PARTIAL();
+#endif
+                    }
+                break;
            default:
                RT_ASSERT(0);
            }
