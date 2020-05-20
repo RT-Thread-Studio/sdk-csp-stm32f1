@@ -14,7 +14,7 @@ series:
       - 5 V-tolerant I/Os
       - Timer with quadrature (incremental) encoder input
       - 96-bit unique ID
-  series_name: RealThread_STM32F1xx
+  series_name: STM32F1
   peripheral: {}
   sub_series:
   - sub_series_name: STM32F100
