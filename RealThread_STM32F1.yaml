@@ -3918,7 +3918,8 @@ series:
     - libraries\STM32F1xx_HAL_Driver
     - libraries\CMSIS\Include
     - libraries\CMSIS\RTOS
-    - libraries\CMSIS\Device\ST\STM32F1xx\Include
+    - libraries\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h
+    - libraries\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h
     - libraries\CMSIS\Device\ST\STM32F1xx\Source\Templates\system_stm32f1xx.c
   cpu_info:
     core: Cortex-M3
