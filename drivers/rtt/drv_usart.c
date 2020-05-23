@@ -6,6 +6,7 @@
  * Change Logs:
  * Date           Author       Notes
  * 2018-10-30     SummerGift   first version
+ * 2020-05-18     chenyaxing   modify usart3 remap check
  */
 #include "string.h"
 #include "stdlib.h"
@@ -329,7 +330,8 @@ static rt_err_t stm32_gpio_clk_enable(GPIO_TypeDef *gpiox)
 
     return RT_EOK;
 }
-char * up_char(char * c)
+
+static int up_char(char * c)
 {
     if ((*c >= 'a') && (*c <= 'z'))
     {
@@ -337,6 +339,7 @@ char * up_char(char * c)
     }
     return 0;
 }
+
 static void get_pin_by_name(const char* pin_name, GPIO_TypeDef **port, uint16_t *pin)
 {
     int pin_num = atoi((char*) &pin_name[2]);
